@@ -1,6 +1,7 @@
 export * as RtDate from './Date'
 export * as RtDom from './Dom'
 export * as RtLine from './Line'
+export * as RtList from './List'
 export * as RtNum from './Num'
 export * as RtObj from './Obj'
 export * as RtRandom from './Random'
