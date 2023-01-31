@@ -31,7 +31,7 @@ export const isDescendant = (parent: HTMLElement, child: HTMLElement) => {
  * @param matchFunc 匹配函数
  * @param containSelf 是否包含自己
  */
-export const pathIsMath = (
+export const isPathMath = (
     dom: HTMLElement,
     matchFunc: (...data: any[]) => boolean,
     containSelf = true
