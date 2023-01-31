@@ -4,6 +4,7 @@
   "description": "The toolbox of methods at your fingertips in js",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --ignore-path .prettierignore --write \"src/**/*.+(js|ts|json)\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
