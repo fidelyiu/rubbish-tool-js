@@ -1,22 +1,21 @@
 {
-  "name": "rubbish-tool",
-  "version": "1.0.0",
-  "description": "The toolbox of methods at your fingertips in js",
-  "main": "index.js",
-  "scripts": {
-    "format": "prettier --ignore-path .prettierignore --write \"src/**/*.+(js|ts|json)\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Field Yiu",
-  "license": "ISC",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "eslint": "^8.33.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.3",
-    "typescript": "^4.9.5"
-  }
+    "name": "rubbish-tool",
+    "version": "1.0.0",
+    "description": "The toolbox of methods at your fingertips in js",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --ignore-path .prettierignore --write ."
+    },
+    "keywords": [],
+    "author": "Field Yiu",
+    "license": "ISC",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.49.0",
+        "@typescript-eslint/parser": "^5.49.0",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.8.3",
+        "typescript": "^4.9.5"
+    }
 }
