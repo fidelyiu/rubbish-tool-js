@@ -1,0 +1,8 @@
+{
+  "name": "build-script",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Field Yiu",
+  "license": "ISC"
+}
