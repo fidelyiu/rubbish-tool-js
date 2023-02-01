@@ -4,7 +4,8 @@
     "description": "The toolbox of methods at your fingertips in js",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --ignore-path .prettierignore --write ."
+        "format": "prettier --ignore-path .prettierignore --write .",
+        "build:types": "tsc src/index.ts --declaration --emitDeclarationOnly --outDir dist/types"
     },
     "keywords": [],
     "author": "Field Yiu",
