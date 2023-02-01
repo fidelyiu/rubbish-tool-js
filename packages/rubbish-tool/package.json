@@ -2,12 +2,21 @@
     "name": "rubbish-tool",
     "version": "1.0.0",
     "description": "The toolbox of methods at your fingertips in js",
-    "main": "index.js",
     "scripts": {
         "format": "prettier --ignore-path .prettierignore --write .",
         "clear:dist": "rimraf dist",
         "build:types": "tsc --project tsconfig.type.json",
         "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+    },
+    "main": "./dist/cjs/rubbish-tool.min.cjs",
+    "module": "./dist/esm/rubbish-tool.min.js",
+    "type": "module",
+    "types": "./dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/rubbish-tool.min.js",
+            "require": "./dist/cjs/rubbish-tool.min.cjs"
+        }
     },
     "keywords": [],
     "author": "Field Yiu",
