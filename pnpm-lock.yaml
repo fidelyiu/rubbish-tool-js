@@ -13,6 +13,7 @@ importers:
       eslint-config-prettier: ^8.6.0
       eslint-plugin-prettier: ^4.2.1
       prettier: ^2.8.3
+      rimraf: ^4.1.2
       typescript: ^4.9.5
     devDependencies:
       '@typescript-eslint/eslint-plugin': 5.49.0_m6tbzvr4xlk3mnjhhcnwwtg7r4
@@ -21,6 +22,7 @@ importers:
       eslint-config-prettier: 8.6.0_eslint@8.33.0
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       prettier: 2.8.3
+      rimraf: 4.1.2
       typescript: 4.9.5
 
 packages:
@@ -868,6 +870,12 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.1.2:
+    resolution: {integrity: sha512-BlIbgFryTbw3Dz6hyoWFhKk+unCcHMSkZGrTFVAx2WmttdBSonsdtRlwiuTbDqTKr+UlXIUqJVS4QT5tUzGENQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /run-parallel/1.2.0:
