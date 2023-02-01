@@ -43,7 +43,7 @@ function decimalAdjust(
  * @param value 小数
  * @param decimals 保留位数，默认0，必须是整数，否则NaN
  */
-export function getRound(value: number, decimals = 0): number {
+export function numGetRound(value: number, decimals = 0): number {
     return decimalAdjust('round', value, decimals)
 }
 
@@ -52,7 +52,7 @@ export function getRound(value: number, decimals = 0): number {
  * @param value 小数
  * @param decimals 保留位数，默认0，必须是整数，否则NaN
  */
-export function getFloor(value: number, decimals = 0) {
+export function numGetFloor(value: number, decimals = 0) {
     return decimalAdjust('floor', value, decimals)
 }
 
@@ -61,6 +61,6 @@ export function getFloor(value: number, decimals = 0) {
  * @param value 小数
  * @param decimals 保留位数，默认0，必须是整数，否则NaN
  */
-export function getCeil(value: number, decimals = 0) {
+export function numGetCeil(value: number, decimals = 0) {
     return decimalAdjust('ceil', value, decimals)
 }
