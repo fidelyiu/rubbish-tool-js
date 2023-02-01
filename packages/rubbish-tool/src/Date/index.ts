@@ -1,4 +1,4 @@
-import { weekTimeStamp } from '../Timestamp'
+import { timeWeek } from '../Time'
 
 /**
  * 是否是有效Date
@@ -82,7 +82,7 @@ export const dateGetWeekNumber = (date: Date) => {
     if (offsetDay === 2) offsetDay = -5
     startOfYear.setDate(offsetDay)
     return Math.ceil(
-        (weekStartData.getTime() - startOfYear.getTime()) / weekTimeStamp
+        (weekStartData.getTime() - startOfYear.getTime()) / timeWeek
     )
 }
 
