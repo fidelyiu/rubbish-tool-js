@@ -8,7 +8,12 @@
  * @param l3 第二个线段的开始点
  * @param l4 第二个线段的结束点
  */
-export const isIntersect = (l1: number, l2: number, l3: number, l4: number) => {
+export const lineIsIntersect = (
+    l1: number,
+    l2: number,
+    l3: number,
+    l4: number
+) => {
     return (
         // l3是否在第一个线段中
         (l1 <= l3 && l3 <= l2) ||
@@ -32,7 +37,7 @@ export const isIntersect = (l1: number, l2: number, l3: number, l4: number) => {
  * @param l3 第二个线段的开始点
  * @param l4 第二个线段的结束点
  */
-export const isInner = (l1: number, l2: number, l3: number, l4: number) => {
+export const lineIsInner = (l1: number, l2: number, l3: number, l4: number) => {
     return (
         // l1是否在第二个线段中
         l3 <= l1 &&

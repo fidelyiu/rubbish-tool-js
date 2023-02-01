@@ -3,7 +3,7 @@
  *
  * [stackoverflow解决方案](https://stackoverflow.com/questions/105034/how-do-i-create-a-guid-uuid)
  */
-export const getId = () => {
+export const randomGetId = () => {
     return (<any>[1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(
         /[018]/g,
         (c: number) =>
@@ -22,6 +22,6 @@ export const getId = () => {
  * @param min 最小值
  * @param max 最大值
  */
-export const getInt = (min = 0, max = 100) => {
+export const randomGetInt = (min = 0, max = 100) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }

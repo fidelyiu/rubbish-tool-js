@@ -1,17 +1,17 @@
-import { weekTimeStamp } from '../Timestamp'
+import { timeWeek } from '../Time'
 
 /**
  * 是否是有效Date
  * @param data 任意数据
  */
-export const isValidDate = (d: any) => d instanceof Date && !isNaN(d.getTime())
+export const dateIsValid = (d: any) => d instanceof Date && !isNaN(d.getTime())
 
 const weekend = new Set([0, 6])
 /**
  * 是否是周末
  * @param date 时间
  */
-export const isWeekend = (date: Date) => weekend.has(date.getDay())
+export const dateIsWeekend = (date: Date) => weekend.has(date.getDay())
 
 /**
  * 添加天数，如果减就加负数
@@ -19,7 +19,7 @@ export const isWeekend = (date: Date) => weekend.has(date.getDay())
  * @param num 添加的数字
  * @returns 新的时间
  */
-export const getAddDayDate = (date: Date, num: number) => {
+export const dateGetAddByDay = (date: Date, num: number) => {
     const result = new Date(date.getTime())
     result.setDate(date.getDate() + num)
     return result
@@ -31,7 +31,7 @@ export const getAddDayDate = (date: Date, num: number) => {
  * @param num 添加的数字
  * @returns 新的时间
  */
-export const getAddMonthDate = (date: Date, num: number) => {
+export const dateGetAddByMonth = (date: Date, num: number) => {
     const result = new Date(date.getTime())
     result.setDate(1)
     result.setMonth(date.getMonth() + num)
@@ -44,7 +44,7 @@ export const getAddMonthDate = (date: Date, num: number) => {
  * @param num 添加的数字
  * @returns 新的时间
  */
-export const getAddYearDate = (date: Date, num: number) => {
+export const dateGetAddByYear = (date: Date, num: number) => {
     const result = new Date(date.getTime())
     result.setFullYear(date.getFullYear() + num)
     return result
@@ -55,7 +55,7 @@ const fstHalfYear = new Set([0, 1, 2, 3, 4, 5])
  * 是否是上半年的月份数
  * @param month
  */
-export const isFstHalfYearMonth = (month: number) => {
+export const dateIsFstHalfYearMonth = (month: number) => {
     return fstHalfYear.has(month)
 }
 
@@ -63,7 +63,7 @@ export const isFstHalfYearMonth = (month: number) => {
  * 获取时间的周数
  * @param date 时间
  */
-export const getWeekNumber = (date: Date) => {
+export const dateGetWeekNumber = (date: Date) => {
     const dateDay = date.getDay()
     let weekStartData
     if (dateDay === 1) {
@@ -73,7 +73,7 @@ export const getWeekNumber = (date: Date) => {
         let dayNum = dateDay - 6
         /* 如果不是周日 */
         if (dayNum !== -6) dayNum = -dateDay
-        weekStartData = getAddDayDate(date, dayNum)
+        weekStartData = dateGetAddByDay(date, dayNum)
     }
     weekStartData.setHours(0, 0, 0, 0)
 
@@ -82,14 +82,14 @@ export const getWeekNumber = (date: Date) => {
     if (offsetDay === 2) offsetDay = -5
     startOfYear.setDate(offsetDay)
     return Math.ceil(
-        (weekStartData.getTime() - startOfYear.getTime()) / weekTimeStamp
+        (weekStartData.getTime() - startOfYear.getTime()) / timeWeek
     )
 }
 
 /**
  * 按天向下取整Date
  */
-export const floorDateByDay = (data: Date) => {
+export const dateGetFloorDateByDay = (data: Date) => {
     const result = new Date(data.getTime())
     result.setHours(0, 0, 0, 0)
     return result
@@ -98,7 +98,7 @@ export const floorDateByDay = (data: Date) => {
 /**
  * 按周向下取整Date（周一）
  */
-export const floorDateByWeek = (data: Date) => {
+export const dateGetFloorDateByWeek = (data: Date) => {
     let result = new Date(data.getTime())
     const dateDay = result.getDay()
     if (dateDay !== 1) {
@@ -106,7 +106,7 @@ export const floorDateByWeek = (data: Date) => {
         let dayNum = dateDay - 6
         /* 如果不是周日 */
         if (dayNum !== -6) dayNum = -dateDay
-        result = getAddDayDate(result, dayNum)
+        result = dateGetAddByDay(result, dayNum)
     }
     result.setHours(0, 0, 0, 0)
     return result
@@ -114,26 +114,26 @@ export const floorDateByWeek = (data: Date) => {
 
 /**
  * 时间格式方法：
- * getStr1 >> 'YYYY年MM月'
- * getStr2 >> 'YYYY年'
- * getStr3 >> 'MM月'
- * getStr4 >> 'YYYY-第Q季'
- * getStr5 >> 'YYYY年MM月DD日'
- * getStr6 >> 'YYYY年MM月DD日 HH:mm:ss'
- * getStr7 >> 'YY-MM'
- * getStr8 >> '第Q季'
- * getStr9 >> 'YYYY/MM/DD'
- * getStr10 >> 'YYYY-MM-DD'
+ * dateGetStr1 >> 'YYYY年MM月'
+ * dateGetStr2 >> 'YYYY年'
+ * dateGetStr3 >> 'MM月'
+ * dateGetStr4 >> 'YYYY-第Q季'
+ * dateGetStr5 >> 'YYYY年MM月DD日'
+ * dateGetStr6 >> 'YYYY年MM月DD日 HH:mm:ss'
+ * dateGetStr7 >> 'YY-MM'
+ * dateGetStr8 >> '第Q季'
+ * dateGetStr9 >> 'YYYY/MM/DD'
+ * dateGetStr10 >> 'YYYY-MM-DD'
  */
 export {
-    getStr1,
-    getStr2,
-    getStr3,
-    getStr4,
-    getStr5,
-    getStr6,
-    getStr7,
-    getStr8,
-    getStr9,
-    getStr10,
+    dateGetStr1,
+    dateGetStr2,
+    dateGetStr3,
+    dateGetStr4,
+    dateGetStr5,
+    dateGetStr6,
+    dateGetStr7,
+    dateGetStr8,
+    dateGetStr9,
+    dateGetStr10,
 } from './format'

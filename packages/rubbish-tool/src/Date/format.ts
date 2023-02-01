@@ -3,7 +3,7 @@
  * @param date 时间
  * @returns 'YYYY年MM月'
  */
-export const getStr1 = (date: Date) => {
+export const dateGetStr1 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     return `${date.getFullYear()}年${monthStr}月`
 }
@@ -13,7 +13,7 @@ export const getStr1 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY年'
  */
-export const getStr2 = (date: Date) => {
+export const dateGetStr2 = (date: Date) => {
     return `${date.getFullYear()}年`
 }
 
@@ -22,7 +22,7 @@ export const getStr2 = (date: Date) => {
  * @param date 时间
  * @returns 'MM月'
  */
-export const getStr3 = (date: Date) => {
+export const dateGetStr3 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     return `${monthStr}月`
 }
@@ -32,7 +32,7 @@ export const getStr3 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY-第Q季'
  */
-export const getStr4 = (date: Date) => {
+export const dateGetStr4 = (date: Date) => {
     const quarterNum = Math.floor(date.getMonth() / 3) + 1
     return `${date.getFullYear()}年-第${quarterNum}季`
 }
@@ -42,7 +42,7 @@ export const getStr4 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY年MM月DD日'
  */
-export const getStr5 = (date: Date) => {
+export const dateGetStr5 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     const dayStr = `${date.getDate()}`.padStart(2, '0')
     return `${date.getFullYear()}年${monthStr}月${dayStr}日`
@@ -53,7 +53,7 @@ export const getStr5 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY年MM月DD日 HH:mm:ss'
  */
-export const getStr6 = (date: Date) => {
+export const dateGetStr6 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     const dayStr = `${date.getDate()}`.padStart(2, '0')
     const hStr = `${date.getHours()}`.padStart(2, '0')
@@ -66,7 +66,7 @@ export const getStr6 = (date: Date) => {
  * @param date 时间
  * @returns 'YY-MM'
  */
-export const getStr7 = (date: Date) => {
+export const dateGetStr7 = (date: Date) => {
     const yearStr = `${date.getFullYear()}`.slice(-2)
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     return `${yearStr}-${monthStr}`
@@ -77,7 +77,7 @@ export const getStr7 = (date: Date) => {
  * @param date 时间
  * @returns '第Q季'
  */
-export const getStr8 = (date: Date) => {
+export const dateGetStr8 = (date: Date) => {
     const quarterNum = Math.floor(date.getMonth() / 3) + 1
     return `第${quarterNum}季`
 }
@@ -87,7 +87,7 @@ export const getStr8 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY/MM/DD'
  */
-export const getStr9 = (date: Date) => {
+export const dateGetStr9 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     const dayStr = `${date.getDate()}`.padStart(2, '0')
     return `${date.getFullYear()}/${monthStr}/${dayStr}`
@@ -98,7 +98,7 @@ export const getStr9 = (date: Date) => {
  * @param date 时间
  * @returns 'YYYY-MM-DD'
  */
-export const getStr10 = (date: Date) => {
+export const dateGetStr10 = (date: Date) => {
     const monthStr = `${date.getMonth() + 1}`.padStart(2, '0')
     const dayStr = `${date.getDate()}`.padStart(2, '0')
     return `${date.getFullYear()}-${monthStr}-${dayStr}`

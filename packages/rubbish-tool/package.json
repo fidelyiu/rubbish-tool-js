@@ -2,20 +2,36 @@
     "name": "rubbish-tool",
     "version": "1.0.0",
     "description": "The toolbox of methods at your fingertips in js",
-    "main": "index.js",
     "scripts": {
-        "format": "prettier --ignore-path .prettierignore --write ."
+        "format": "prettier --ignore-path .prettierignore --write .",
+        "clear:dist": "rimraf dist",
+        "build:types": "tsc --project tsconfig.type.json",
+        "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+    },
+    "main": "./dist/cjs/rubbish-tool.min.cjs",
+    "module": "./dist/esm/rubbish-tool.min.js",
+    "type": "module",
+    "types": "./dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/rubbish-tool.min.js",
+            "require": "./dist/cjs/rubbish-tool.min.cjs"
+        }
     },
     "keywords": [],
     "author": "Field Yiu",
     "license": "ISC",
     "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.0",
+        "@rollup/plugin-typescript": "^11.0.0",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "@typescript-eslint/parser": "^5.49.0",
         "eslint": "^8.33.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-prettier": "^4.2.1",
         "prettier": "^2.8.3",
+        "rimraf": "^4.1.2",
+        "rollup": "^3.12.1",
         "typescript": "^4.9.5"
     }
 }

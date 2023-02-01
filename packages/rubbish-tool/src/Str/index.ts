@@ -1,14 +1,14 @@
 /**
  * 获取字符串反转
  */
-export function getReverse(str: string): string {
+export function strGetReverse(str: string): string {
     return str.split('').reverse().join('')
 }
 
 /**
  * 获取第一个字符
  */
-export function getFirst(str: string): string {
+export function strGetFirst(str: string): string {
     return str[0] || ''
 }
 
@@ -18,7 +18,7 @@ export function getFirst(str: string): string {
  * @param e 删除的结尾字符串
  * @returns 新的字符串，如果没有以 `e` 结尾则不删除
  */
-export function getDelEnd(s: string, e: string): string {
+export function strGetDelEnd(s: string, e: string): string {
     if (!s.endsWith(e)) {
         return s
     } else {

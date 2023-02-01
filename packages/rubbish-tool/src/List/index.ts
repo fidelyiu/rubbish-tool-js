@@ -5,7 +5,7 @@
  * @param value 检索值
  * @returns 检索到的item，也可能是undefined
  */
-export function getItemByKey(list: any[], key: string, value: any) {
+export function listGetItemByKey(list: any[], key: string, value: any) {
     if (!Array.isArray(list)) return
     const loopLen = list.length
     for (let i = 0; i < loopLen; i++) {
