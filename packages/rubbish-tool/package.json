@@ -6,7 +6,8 @@
         "format": "prettier --ignore-path .prettierignore --write .",
         "clear:dist": "rimraf dist",
         "build:types": "tsc --project tsconfig.type.json",
-        "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+        "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+        "build": "npm run clear:dist && npm run build:types && npm run build:src"
     },
     "main": "./dist/cjs/rubbish-tool.min.cjs",
     "module": "./dist/esm/rubbish-tool.min.js",
