@@ -33,7 +33,7 @@ export const domIsDescendant = (parent: HTMLElement, child: HTMLElement) => {
  */
 export const domIsPathMath = (
     dom: HTMLElement,
-    matchFunc: (...data: any[]) => boolean,
+    matchFunc: (e: ParentNode | undefined) => boolean,
     containSelf = true
 ) => {
     if (!dom || typeof matchFunc !== 'function') return false

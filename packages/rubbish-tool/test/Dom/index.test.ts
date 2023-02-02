@@ -1,4 +1,4 @@
-import { domIsDescendant, domOpenLink } from '../../src'
+import { domIsDescendant, domIsPathMath, domOpenLink } from '../../src'
 import { screen } from '@testing-library/dom'
 
 describe('dom测试', () => {
@@ -54,6 +54,25 @@ describe('dom测试', () => {
             `
             const dom1 = screen.getByTestId(dom1Id)
             expect(domIsDescendant(dom1, dom1)).toBe(true)
+        })
+    })
+
+    describe('路径是否匹配', () => {
+        test('匹配', () => {
+            const domId = 'testDom'
+            document.body.innerHTML = `
+                <div class="class1">
+                    <div class="class2">
+                        <div class="class3" data-testid="${domId}"></div>
+                    </div>
+                </div>
+            `
+            const testDom = screen.getByTestId(domId)
+            expect(
+                domIsPathMath(testDom, () => {
+                    return false
+                })
+            ).toBe(true)
         })
     })
 })
