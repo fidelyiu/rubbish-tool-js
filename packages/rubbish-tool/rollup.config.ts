@@ -13,17 +13,23 @@ const bundles: RollupOptions[] = [
         },
         plugins: [typescript()],
     },
+    /* es min no map */
+    {
+        input: 'src/index.ts',
+        output: {
+            file: 'dist/esm/rubbish-tool.min.nomap.js',
+            format: 'esm',
+        },
+        plugins: [typescript(), terser()],
+    },
     /* es min */
     {
         input: 'src/index.ts',
         output: {
             file: 'dist/esm/rubbish-tool.min.js',
             format: 'esm',
-            // sourcemap: true,
-            // sourcemapFile: path.join(
-            //     __dirname,
-            //     'dist/cjs/rubbish-tool.min.map'
-            // ),
+            sourcemap: true,
+            sourcemapFile: 'dist/esm/rubbish-tool.min.map',
         },
         plugins: [typescript(), terser()],
     },
@@ -36,12 +42,23 @@ const bundles: RollupOptions[] = [
         },
         plugins: [typescript()],
     },
+    /* commonjs min nomap*/
+    {
+        input: 'src/index.ts',
+        output: {
+            file: 'dist/cjs/rubbish-tool.min.nomap.cjs',
+            format: 'cjs',
+        },
+        plugins: [typescript(), terser()],
+    },
     /* commonjs min */
     {
         input: 'src/index.ts',
         output: {
             file: 'dist/cjs/rubbish-tool.min.cjs',
             format: 'cjs',
+            sourcemap: true,
+            sourcemapFile: 'dist/cjs/rubbish-tool.min.map',
         },
         plugins: [typescript(), terser()],
     },
@@ -55,6 +72,16 @@ const bundles: RollupOptions[] = [
         },
         plugins: [typescript()],
     },
+    /* umd min no map */
+    {
+        input: 'src/index.ts',
+        output: {
+            name: 'RTool',
+            file: 'dist/umd/rubbish-tool.min.nomap.js',
+            format: 'umd',
+        },
+        plugins: [typescript(), terser()],
+    },
     /* umd min */
     {
         input: 'src/index.ts',
@@ -62,6 +89,8 @@ const bundles: RollupOptions[] = [
             name: 'RTool',
             file: 'dist/umd/rubbish-tool.min.js',
             format: 'umd',
+            sourcemap: true,
+            sourcemapFile: 'dist/umd/rubbish-tool.min.map',
         },
         plugins: [typescript(), terser()],
     },
