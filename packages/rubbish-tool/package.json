@@ -1,13 +1,20 @@
 {
     "name": "rubbish-tool",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "The toolbox of methods at your fingertips in js",
     "scripts": {
         "format": "prettier --ignore-path .prettierignore --write .",
         "clear:dist": "rimraf dist",
         "build:types": "tsc --project tsconfig.type.json",
         "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-        "build": "npm run clear:dist && npm run build:types && npm run build:src"
+        "build": "npm run clear:dist && npm run build:types && npm run build:src",
+        "version:major": "npm version major",
+        "version:minor": "npm version minor",
+        "version:patch": "npm version patch",
+        "version:premajor": "npm version premajor",
+        "version:preminor": "npm version preminor",
+        "version:prepatch": "npm version prepatch",
+        "version:prerelease": "npm version prerelease"
     },
     "type": "module",
     "types": "./dist/types/index.d.ts",
