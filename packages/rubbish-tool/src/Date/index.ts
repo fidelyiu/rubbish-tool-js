@@ -26,7 +26,7 @@ export const dateGetAddByDay = (date: Date, num: number) => {
 }
 
 /**
- * 添加月数，如果减就加负数
+ * 添加月数，如果减就加负数(结果总是月份的第一天)
  * @param date 时间
  * @param num 添加的数字
  * @returns 新的时间
@@ -39,7 +39,7 @@ export const dateGetAddByMonth = (date: Date, num: number) => {
 }
 
 /**
- * 添加年数，如果减就加负数
+ * 添加年数，如果减就加负数(月份肯能会变动)
  * @param date 时间
  * @param num 添加的数字
  * @returns 新的时间
@@ -53,10 +53,10 @@ export const dateGetAddByYear = (date: Date, num: number) => {
 const fstHalfYear = new Set([0, 1, 2, 3, 4, 5])
 /**
  * 是否是上半年的月份数
- * @param month
+ * @param date 时间
  */
-export const dateIsFstHalfYearMonth = (month: number) => {
-    return fstHalfYear.has(month)
+export const dateIsFstHalfYearMonth = (date: Date) => {
+    return fstHalfYear.has(date.getMonth())
 }
 
 /**
