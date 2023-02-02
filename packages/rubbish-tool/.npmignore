@@ -7,3 +7,6 @@ cache
 rollup.config.ts
 tsconfig.json
 tsconfig.type.json
+jest.config.ts
+test
+coverage
