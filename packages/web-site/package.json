@@ -1,5 +1,5 @@
 {
-  "name": "build-script",
+  "name": "web-site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
