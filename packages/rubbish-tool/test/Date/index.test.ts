@@ -213,20 +213,25 @@ describe('时间测试', () => {
     })
 
     describe('获取周数', () => {
-        test('第一周', () => {
+        test('最后一周', () => {
+            expect(
+                dateGetWeekNumber(new Date('2022-12-31T00:00:00.000Z'))
+            ).toBe(52)
+        })
+        test('年前补齐上一年周数', () => {
             expect(
                 dateGetWeekNumber(new Date('2023-01-01T00:00:00.000Z'))
+            ).toBe(52)
+        })
+        test('第一周', () => {
+            expect(
+                dateGetWeekNumber(new Date('2023-01-02T00:00:00.000Z'))
             ).toBe(1)
         })
         test('第二周', () => {
             expect(
-                dateGetWeekNumber(new Date('2023-01-02T00:00:00.000Z'))
+                dateGetWeekNumber(new Date('2023-01-09T00:00:00.000Z'))
             ).toBe(2)
-        })
-        test('最后一周', () => {
-            expect(
-                dateGetWeekNumber(new Date('2022-12-31T00:00:00.000Z'))
-            ).toBe(1)
         })
     })
 

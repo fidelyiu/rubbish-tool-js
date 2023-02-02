@@ -60,7 +60,7 @@ export const dateIsFstHalfYearMonth = (date: Date) => {
 }
 
 /**
- * 获取时间的周数
+ * 获取时间的周数（年初的部分天数会补齐上年最后一周）
  * @param date 时间
  */
 export const dateGetWeekNumber = (date: Date) => {
