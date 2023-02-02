@@ -55,6 +55,17 @@ describe('dom测试', () => {
             const dom1 = screen.getByTestId(dom1Id)
             expect(domIsDescendant(dom1, dom1)).toBe(true)
         })
+
+        test('非法传入', () => {
+            const dom1Id = 'dom1'
+            const dom2Id = 'dom2'
+            document.body.innerHTML = ``
+            const dom1 = screen.queryByTestId(dom1Id)
+            const dom2 = screen.queryByTestId(dom2Id)
+            expect(
+                domIsDescendant(dom1 as HTMLElement, dom2 as HTMLElement)
+            ).toBe(false)
+        })
     })
 
     describe('路径是否匹配', () => {
@@ -69,10 +80,78 @@ describe('dom测试', () => {
             `
             const testDom = screen.getByTestId(domId)
             expect(
-                domIsPathMath(testDom, () => {
-                    return false
+                domIsPathMath(testDom, (parentNode) => {
+                    if (!parentNode) return false
+                    const { className } = <HTMLElement>parentNode
+                    if (!className) return false
+                    return className.includes('class1')
                 })
             ).toBe(true)
+        })
+
+        test('不匹配', () => {
+            const domId = 'testDom'
+            document.body.innerHTML = `
+                <div>
+                    <div class="class2">
+                        <div class="class3" data-testid="${domId}"></div>
+                    </div>
+                </div>
+            `
+            const testDom = screen.getByTestId(domId)
+            expect(
+                domIsPathMath(testDom, (parentNode) => {
+                    if (!parentNode) return false
+                    const { className } = <HTMLElement>parentNode
+                    if (!className) return false
+                    return className.includes('class1')
+                })
+            ).toBe(false)
+        })
+
+        test('匹配自己', () => {
+            const domId = 'testDom'
+            document.body.innerHTML = `
+                <div class="class1" data-testid="${domId}"></div>
+            `
+            const testDom = screen.getByTestId(domId)
+            expect(
+                domIsPathMath(testDom, (parentNode) => {
+                    if (!parentNode) return false
+                    const { className } = <HTMLElement>parentNode
+                    if (!className) return false
+                    return className.includes('class1')
+                })
+            ).toBe(true)
+        })
+
+        test('不匹配自己', () => {
+            const domId = 'testDom'
+            document.body.innerHTML = `
+                <div class="class1" data-testid="${domId}"></div>
+            `
+            const testDom = screen.getByTestId(domId)
+            expect(
+                domIsPathMath(
+                    testDom,
+                    (parentNode) => {
+                        if (!parentNode) return false
+                        const { className } = <HTMLElement>parentNode
+                        if (!className) return false
+                        return className.includes('class1')
+                    },
+                    false
+                )
+            ).toBe(false)
+        })
+
+        test('非法传入', () => {
+            const domId = 'testDom'
+            document.body.innerHTML = ``
+            const testDom = screen.queryByTestId(domId)
+            expect(domIsPathMath(testDom as HTMLElement, () => true)).toBe(
+                false
+            )
         })
     })
 })
