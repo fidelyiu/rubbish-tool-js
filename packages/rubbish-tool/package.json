@@ -15,7 +15,7 @@
         "version:preminor": "npm version preminor",
         "version:prepatch": "npm version prepatch",
         "version:prerelease": "npm version prerelease",
-        "test": "jest"
+        "test": "jest --detectOpenHandles"
     },
     "type": "module",
     "types": "./dist/types/index.d.ts",
@@ -36,7 +36,9 @@
     "devDependencies": {
         "@rollup/plugin-terser": "^0.4.0",
         "@rollup/plugin-typescript": "^11.0.0",
+        "@testing-library/dom": "^8.20.0",
         "@types/jest": "^29.4.0",
+        "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "@typescript-eslint/parser": "^5.49.0",
         "eslint": "^8.33.0",
