@@ -6,6 +6,9 @@ describe('数字测试', () => {
             test('四舍', () => {
                 expect(numGetRound(15.4)).toBe(15)
                 expect(numGetRound(1.54e1)).toBe(15)
+                expect(numGetRound(1.332115612191919e12)).toBe(
+                    1.332115612192e12
+                )
             })
             test('五入', () => {
                 expect(numGetRound(15.5)).toBe(16)
@@ -34,6 +37,18 @@ describe('数字测试', () => {
                 expect(numGetRound(1.5555e1, 2)).toBe(15.56)
                 expect(numGetRound(0.005, 2)).toBe(0.01)
                 expect(numGetRound(5e-3, 2)).toBe(0.01)
+            })
+        })
+        describe('保留e位小数', () => {
+            test('四舍', () => {
+                expect(numGetRound(1.332115612191911e1, 13)).toBe(
+                    1.33211561219191e1
+                )
+            })
+            test('五入', () => {
+                expect(numGetRound(1.332115612191919e1, 13)).toBe(
+                    1.33211561219192e1
+                )
             })
         })
         describe('保留10位数', () => {
