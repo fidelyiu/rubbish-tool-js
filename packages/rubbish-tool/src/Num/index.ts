@@ -41,26 +41,26 @@ function decimalAdjust(
 /**
  * 获取四舍五入保留小数结果
  * @param value 小数
- * @param decimals 保留位数，默认0，必须是整数，否则NaN
+ * @param decimals 保留小数位，默认0，必须是整数，否则NaN
  */
 export function numGetRound(value: number, decimals = 0): number {
-    return decimalAdjust('round', value, decimals)
+    return decimalAdjust('round', value, -decimals)
 }
 
 /**
  * 获取向下取整保留小数结果
  * @param value 小数
- * @param decimals 保留位数，默认0，必须是整数，否则NaN
+ * @param decimals 保留小数位，默认0，必须是整数，否则NaN
  */
 export function numGetFloor(value: number, decimals = 0) {
-    return decimalAdjust('floor', value, decimals)
+    return decimalAdjust('floor', value, -decimals)
 }
 
 /**
  * 获取向上取整保留小数结果
  * @param value 小数
- * @param decimals 保留位数，默认0，必须是整数，否则NaN
+ * @param decimals 保留小数位，默认0，必须是整数，否则NaN
  */
 export function numGetCeil(value: number, decimals = 0) {
-    return decimalAdjust('ceil', value, decimals)
+    return decimalAdjust('ceil', value, -decimals)
 }
