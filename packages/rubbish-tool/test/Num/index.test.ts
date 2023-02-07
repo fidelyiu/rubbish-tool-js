@@ -87,7 +87,7 @@ describe('数字测试', () => {
                 )
             })
         })
-        test('方法传入', () => {
+        test('非法传入', () => {
             expect(numGetRound(155, 12.5)).toBe(NaN)
             expect(numGetRound(1.55e2, 12.5)).toBe(NaN)
             expect(numGetRound(155, '??' as unknown as number)).toBe(NaN)
@@ -125,7 +125,7 @@ describe('数字测试', () => {
             expect(numGetFloor(155.555, -2)).toBe(100)
             expect(numGetFloor(1.55555e2, -2)).toBe(100)
         })
-        test('方法传入', () => {
+        test('非法传入', () => {
             expect(numGetFloor(155, 12.5)).toBe(NaN)
             expect(numGetFloor(1.55e2, 12.5)).toBe(NaN)
             expect(numGetFloor(155, '??' as unknown as number)).toBe(NaN)
@@ -163,7 +163,7 @@ describe('数字测试', () => {
             expect(numGetCeil(155.555, -2)).toBe(200)
             expect(numGetCeil(1.55555e2, -2)).toBe(200)
         })
-        test('方法传入', () => {
+        test('非法传入', () => {
             expect(numGetCeil(155, 12.5)).toBe(NaN)
             expect(numGetCeil(1.55e2, 12.5)).toBe(NaN)
             expect(numGetCeil(155, '??' as unknown as number)).toBe(NaN)

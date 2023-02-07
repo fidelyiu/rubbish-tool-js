@@ -2,6 +2,8 @@
 title: Dom dom工具
 ---
 
+# Dom dom工具
+
 ## 打开链接
 
 ```js

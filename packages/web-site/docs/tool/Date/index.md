@@ -2,6 +2,8 @@
 title: Date 日期工具
 ---
 
+# Date 日期工具
+
 ## 工具使用说明
 
 以下工具方法中仅`dateGetAddByDay`的入参为`any`，其他非法都需要`Date`对象才行。
