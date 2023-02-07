@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  base: "/rubbish-tool-js/",
   title: "Rubbish-tool",
   description: "The toolbox of methods at your fingertips in js.",
   cleanUrls: true,
@@ -8,7 +9,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: "Rubbish-tool",
     outline: 2,
-    outlineTitle: '本文内容',
+    outlineTitle: "本文内容",
     socialLinks: [
       { icon: "github", link: "https://github.com/fidelyiu/rubbish-tool-js" },
     ],
