@@ -14,10 +14,8 @@ export const timeWeek = 604800000
  */
 export const timeGetByAny = (data: any) => {
     if (!data) return
-    try {
-        const date = new Date(data)
-        return date.getTime()
-    } catch (error) {
-        // continue regardless of error
-    }
+    const date = new Date(data)
+    const result = date.getTime()
+    if (isNaN(result)) return
+    return result
 }
