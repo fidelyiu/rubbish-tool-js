@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/what-is-vitepress
+      link: /Date/index.md
     - theme: alt
       text: View on GitHub
       link: https://github.com/fidelyiu/rubbish-tool-js
