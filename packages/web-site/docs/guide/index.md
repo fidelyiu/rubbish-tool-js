@@ -23,7 +23,7 @@ console.log(`一天的毫秒数为：${timeDay}`)
 
 ### CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/rubbish-tool"></script>
+<script src="https://cdn.jsdelivr.net/npm/rubbish-tool/dist/umd/rubbish-tool.min.js"></script>
 <script>
     const { timeDay } = RTool;
     console.log(`一天的毫秒数为：${timeDay}`)
