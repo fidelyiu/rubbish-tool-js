@@ -44,11 +44,13 @@ describe('数字测试', () => {
                 expect(numGetRound(1.332115612191911e1, 13)).toBe(
                     1.33211561219191e1
                 )
+                expect(numGetRound(1.2646541714646516e33, -33)).toBe(1e33)
             })
             test('五入', () => {
                 expect(numGetRound(1.332115612191919e1, 13)).toBe(
                     1.33211561219192e1
                 )
+                expect(numGetRound(1.5646541714646516e33, -33)).toBe(2e33)
             })
         })
         describe('保留10位数', () => {
