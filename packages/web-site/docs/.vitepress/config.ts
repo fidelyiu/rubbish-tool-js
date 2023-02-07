@@ -14,16 +14,22 @@ export default defineConfig({
       message: "Released under the MIT License.",
       copyright: "Copyright © 2019-present Fidel Yiu",
     },
-    sidebar: [
-      { text: "Date 日期", link: "/Date/index.md" },
-      { text: "Dom dom", link: "/Dom/index.md" },
-      { text: "Line 线段", link: "/Line/index.md" },
-      { text: "List 数组", link: "/List/index.md" },
-      { text: "Num 数字", link: "/Num/index.md" },
-      { text: "Obj 对象", link: "/Obj/index.md" },
-      { text: "Random 随机", link: "/Random/index.md" },
-      { text: "Str 字符串", link: "/Str/index.md" },
-      { text: "Time 时间戳", link: "/Time/index.md" },
+    nav: [
+      { text: "指引", link: "/guide/index.md" },
+      { text: "工具", link: "/tool/Date/index.md" },
     ],
+    sidebar: {
+      "/tool/": [
+        { text: "Date 日期", link: "/tool/Date/index.md" },
+        { text: "Dom dom", link: "/tool/Dom/index.md" },
+        { text: "Line 线段", link: "/tool/Line/index.md" },
+        { text: "List 数组", link: "/tool/List/index.md" },
+        { text: "Num 数字", link: "/tool/Num/index.md" },
+        { text: "Obj 对象", link: "/tool/Obj/index.md" },
+        { text: "Random 随机", link: "/tool/Random/index.md" },
+        { text: "Str 字符串", link: "/tool/Str/index.md" },
+        { text: "Time 时间戳", link: "/tool/Time/index.md" },
+      ],
+    },
   },
 });

@@ -9,10 +9,10 @@ hero:
     alt: Rubbish-tool
   actions:
     - theme: brand
-      text: Get Started
-      link: /Date/index.md
+      text: 开始
+      link: /guide/index.md
     - theme: alt
-      text: View on GitHub
+      text: 在GitHub上查看
       link: https://github.com/fidelyiu/rubbish-tool-js
 
 features:
