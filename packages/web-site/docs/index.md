@@ -13,23 +13,31 @@ hero:
       link: /guide/what-is-vitepress
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/fidelyiu/rubbish-tool-js
 
 features:
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-  - icon:
-      src: /cool-feature-icon.svg
-    title: Another cool feature
-    details: Lorem ipsum...
-  - icon:
-      dark: /dark-feature-icon.svg
-      light: /light-feature-icon.svg
-    title: Another cool feature
-    details: Lorem ipsum...
+  - icon: 🕒
+    title: Date工具
+    details: 格式化、取整...
+  - icon: 💷
+    title: Dom工具
+    details: 父节点、匹配...
+  - icon: ⛓
+    title: 线段工具
+    details: 相交、包含...
+  - icon: 🍳
+    title: 数组工具
+    details: key索引...
+  - icon: 🔟
+    title: 数字工具
+    details: 小数保留...
+  - icon: 🧸
+    title: 对象工具
+    details: 字符串对比...
+  - icon: 🎲
+    title: 随机工具
+    details: Id、数字...
+  - icon: 🔠
+    title: 字符串工具
+    details: 首字母、尾删除...
 ---
-
-# Hello Yiu
-
-测试文章

@@ -5,5 +5,9 @@ export default {
   lastUpdated: true,
   themeConfig: {
     siteTitle: "Rubbish-tool",
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2019-present Fidel Yiu",
+    },
   },
 };
