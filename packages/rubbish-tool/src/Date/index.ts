@@ -105,7 +105,7 @@ export const dateGetFloorDateByWeek = (data: Date) => {
         /* 周日减6天 */
         let dayNum = dateDay - 6
         /* 如果不是周日 */
-        if (dayNum !== -6) dayNum = -dateDay
+        if (dayNum !== -6) dayNum = -dateDay + 1
         result = dateGetAddByDay(result, dayNum)
     }
     result.setHours(0, 0, 0, 0)

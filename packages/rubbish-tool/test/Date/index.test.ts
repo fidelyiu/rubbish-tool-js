@@ -2,6 +2,8 @@ import {
     dateGetAddByDay,
     dateGetAddByMonth,
     dateGetAddByYear,
+    dateGetFloorDateByDay,
+    dateGetFloorDateByWeek,
     dateGetStr1,
     dateGetStr10,
     dateGetStr2,
@@ -232,6 +234,56 @@ describe('时间测试', () => {
             expect(
                 dateGetWeekNumber(new Date('2023-01-09T00:00:00.000Z'))
             ).toBe(2)
+        })
+    })
+
+    describe('按天向下取整Date', () => {
+        test('测试1', () => {
+            const date1 = new Date('2023-02-02T15:15:15.000Z')
+            const date2 = new Date('2023-02-02T00:00:00.000Z')
+            const testDate1 =
+                date1.getTime() + date1.getTimezoneOffset() * 60000
+            const testDate2 =
+                date2.getTime() + date2.getTimezoneOffset() * 60000
+            expect(dateGetFloorDateByDay(new Date(testDate1))).toStrictEqual(
+                new Date(testDate2)
+            )
+        })
+        test('测试2', () => {
+            const date1 = new Date('2023-02-02T23:59:59.000Z')
+            const date2 = new Date('2023-02-02T00:00:00.000Z')
+            const testDate1 =
+                date1.getTime() + date1.getTimezoneOffset() * 60000
+            const testDate2 =
+                date2.getTime() + date2.getTimezoneOffset() * 60000
+            expect(dateGetFloorDateByDay(new Date(testDate1))).toStrictEqual(
+                new Date(testDate2)
+            )
+        })
+        test('测试3', () => {
+            const date1 = new Date('2023-02-02T00:00:00.000Z')
+            const date2 = new Date('2023-02-02T00:00:00.000Z')
+            const testDate1 =
+                date1.getTime() + date1.getTimezoneOffset() * 60000
+            const testDate2 =
+                date2.getTime() + date2.getTimezoneOffset() * 60000
+            expect(dateGetFloorDateByDay(new Date(testDate1))).toStrictEqual(
+                new Date(testDate2)
+            )
+        })
+    })
+
+    describe('按周向下取整Date', () => {
+        test('测试1', () => {
+            const date1 = new Date('2023-02-02T15:15:15.000Z')
+            const date2 = new Date('2023-01-30T00:00:00.000Z')
+            const testDate1 =
+                date1.getTime() + date1.getTimezoneOffset() * 60000
+            const testDate2 =
+                date2.getTime() + date2.getTimezoneOffset() * 60000
+            expect(dateGetFloorDateByWeek(new Date(testDate1))).toStrictEqual(
+                new Date(testDate2)
+            )
         })
     })
 
