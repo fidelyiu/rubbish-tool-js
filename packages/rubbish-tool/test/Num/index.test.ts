@@ -39,20 +39,6 @@ describe('数字测试', () => {
                 expect(numGetRound(5e-3, 2)).toBe(0.01)
             })
         })
-        describe('保留e位小数', () => {
-            test('四舍', () => {
-                expect(numGetRound(1.332115612191911e1, 13)).toBe(
-                    1.33211561219191e1
-                )
-                expect(numGetRound(1.2646541714646516e33, -33)).toBe(1e33)
-            })
-            test('五入', () => {
-                expect(numGetRound(1.332115612191919e1, 13)).toBe(
-                    1.33211561219192e1
-                )
-                expect(numGetRound(1.5646541714646516e33, -33)).toBe(2e33)
-            })
-        })
         describe('保留10位数', () => {
             test('四舍', () => {
                 expect(numGetRound(12.44, -1)).toBe(10)
@@ -71,6 +57,34 @@ describe('数字测试', () => {
             test('五入', () => {
                 expect(numGetRound(155, -2)).toBe(200)
                 expect(numGetRound(1.55e2, -2)).toBe(200)
+            })
+        })
+        describe('保留e位小数', () => {
+            test('四舍', () => {
+                expect(numGetRound(1.332115612191911e1, 13)).toBe(
+                    1.33211561219191e1
+                )
+                expect(numGetRound(1.2646541714646516e33, -33)).toBe(1e33)
+            })
+            test('五入', () => {
+                expect(numGetRound(1.332115612191919e1, 13)).toBe(
+                    1.33211561219192e1
+                )
+                expect(numGetRound(1.5646541714646516e33, -33)).toBe(2e33)
+            })
+        })
+        describe('超精度保留', () => {
+            test('四舍', () => {
+                expect(numGetRound(1.2646541714646516e33, -33)).toBe(1e33)
+                expect(numGetRound(1.2646541714646516e33, -1)).toBe(
+                    1.2646541714646516e33
+                )
+            })
+            test('五入', () => {
+                expect(numGetRound(1.5646541714646516e33, -33)).toBe(2e33)
+                expect(numGetRound(1.5646541714646516e33, -1)).toBe(
+                    1.5646541714646516e33
+                )
             })
         })
         test('方法传入', () => {
