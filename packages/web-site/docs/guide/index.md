@@ -1,4 +1,4 @@
-# 安装
+## 安装
 
 ```bash
 npm i rubbish-tool
@@ -6,22 +6,22 @@ yarn add rubbish-tool
 pnpm add rubbish-tool
 ```
 
-# 使用
-## ems & ts
+## 使用
+### ems & ts
 ```js
 import { timeDay } from "rubbish-tool"
 console.log(`一天的毫秒数为：${timeDay}`)
 ```
 
 
-## commonjs
+### commonjs
 ```js
 const { timeDay } = require("rubbish-tool");
 console.log(`一天的毫秒数为：${timeDay}`)
 ```
 
 
-## CDN
+### CDN
 ```html
 <script src="https://cdn.jsdelivr.net/npm/rubbish-tool"></script>
 <script>

@@ -7,7 +7,7 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     siteTitle: "Rubbish-tool",
-    outline: 3,
+    outline: 2,
     outlineTitle: '本文内容',
     socialLinks: [
       { icon: "github", link: "https://github.com/fidelyiu/rubbish-tool-js" },
