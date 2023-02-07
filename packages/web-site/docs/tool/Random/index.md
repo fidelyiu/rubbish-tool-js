@@ -2,7 +2,7 @@
 title: Random 随机工具
 ---
 
-# Random 随机
+# Random 随机工具
 
 
 ## 随机ID
