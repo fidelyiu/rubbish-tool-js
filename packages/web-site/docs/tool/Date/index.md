@@ -12,7 +12,8 @@ title: Date 日期工具
 
 ```js
 import { dateGetAddByDay } from 'rubbish-tool'
-dateIsValid(new Date()) // true
+
+dateIsValid(new Date())
 ```
 
 测试列表：
@@ -28,6 +29,7 @@ dateIsValid(new Date()) // true
 
 ```js
 import { dateIsWeekend } from 'rubbish-tool'
+
 dateIsWeekend(new Date())
 ```
 
@@ -50,6 +52,7 @@ dateIsWeekend(new Date())
 
 ```js
 import { dateGetAddByDay } from 'rubbish-tool'
+
 dateGetAddByDay(new Date('2023-01-30T00:00:00.000Z'), 1)
 ```
 
@@ -69,6 +72,7 @@ dateGetAddByDay(new Date('2023-01-30T00:00:00.000Z'), 1)
 
 ```js
 import { dateGetAddByMonth } from 'rubbish-tool'
+
 dateGetAddByMonth(new Date('2023-01-28T00:00:00.000Z'), 1)
 ```
 
@@ -90,6 +94,7 @@ dateGetAddByMonth(new Date('2023-01-28T00:00:00.000Z'), 1)
 
 ```js
 import { dateGetAddByYear } from 'rubbish-tool'
+
 dateGetAddByYear(new Date('2023-01-28T00:00:00.000Z'), 1)
 ```
 
@@ -109,6 +114,7 @@ dateGetAddByYear(new Date('2023-01-28T00:00:00.000Z'), 1)
 
 ```js
 import { dateIsFstHalfYearMonth } from 'rubbish-tool'
+
 dateIsFstHalfYearMonth(new Date('2023-01-01T00:00:00.000Z'))
 ```
 
@@ -138,6 +144,7 @@ dateIsFstHalfYearMonth(new Date('2023-01-01T00:00:00.000Z'))
 
 ```js
 import { dateGetWeekNumber } from 'rubbish-tool'
+
 dateGetWeekNumber(new Date('2023-01-01T00:00:00.000Z'))
 ```
 
@@ -156,6 +163,7 @@ dateGetWeekNumber(new Date('2023-01-01T00:00:00.000Z'))
 
 ```js
 import { dateGetFloorDateByDay } from 'rubbish-tool'
+
 dateGetFloorDateByDay(new Date('2023-01-01T00:00:00.000Z'))
 ```
 
@@ -175,6 +183,7 @@ dateGetFloorDateByDay(new Date('2023-01-01T00:00:00.000Z'))
 
 ```js
 import { dateGetFloorDateByWeek } from 'rubbish-tool'
+
 dateGetFloorDateByWeek(new Date('2023-01-01T00:00:00.000Z'))
 ```
 
@@ -190,6 +199,7 @@ dateGetFloorDateByWeek(new Date('2023-01-01T00:00:00.000Z'))
 
 ```js
 import { dateGetStr1 } from 'rubbish-tool'
+
 dateGetStr1(new Date('2023-01-01T00:00:00.000Z'))
 ```
 
