@@ -47,9 +47,11 @@ importers:
 
   packages/web-site:
     specifiers:
+      rimraf: ^4.1.2
       vitepress: 1.0.0-alpha.45
       vue: ^3.2.47
     devDependencies:
+      rimraf: 4.1.2
       vitepress: 1.0.0-alpha.45
       vue: 3.2.47
 
