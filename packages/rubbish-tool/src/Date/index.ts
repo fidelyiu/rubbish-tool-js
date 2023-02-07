@@ -39,7 +39,7 @@ export const dateGetAddByMonth = (date: Date, num: number) => {
 }
 
 /**
- * 添加年数，如果减就加负数(月份肯能会变动)
+ * 添加年数，如果减就加负数(月份可能会变动)
  * @param date 时间
  * @param num 添加的数字
  * @returns 新的时间
@@ -52,7 +52,7 @@ export const dateGetAddByYear = (date: Date, num: number) => {
 
 const fstHalfYear = new Set([0, 1, 2, 3, 4, 5])
 /**
- * 是否是上半年的月份数
+ * 是否是上半年
  * @param date 时间
  */
 export const dateIsFstHalfYearMonth = (date: Date) => {
