@@ -1,4 +1,10 @@
-import { domIsDescendant, domIsPathMath, domOpenLink } from '../../src'
+import {
+    domGetFont,
+    domGetTextWidth,
+    domIsDescendant,
+    domIsPathMath,
+    domOpenLink,
+} from '../../src'
 import { screen } from '@testing-library/dom'
 
 describe('dom测试', () => {
@@ -152,6 +158,37 @@ describe('dom测试', () => {
             expect(domIsPathMath(testDom as HTMLElement, () => true)).toBe(
                 false
             )
+        })
+    })
+
+    test('获取dom字体样式', () => {
+        const testConfig = {
+            /* 这些结果貌似在测试框架中有问题???? */
+            'h1@serif': 12,
+            'h2@serif': 12,
+            'h3@serif': 12,
+            'h4@serif': 12,
+            'h5@serif': 12,
+            'h6@serif': 12,
+            'h1@sans-serif': 12,
+            'h2@sans-serif': 12,
+            'h3@sans-serif': 12,
+            'h4@sans-serif': 12,
+            'h5@sans-serif': 12,
+            'h6@sans-serif': 12,
+        }
+        const testStr = 'Hello, World'
+        const innerHTML = Object.keys(testConfig)
+            .map((domConfig) => {
+                const [tagName, fontFamily] = domConfig.split('@')
+                return `<${tagName} data-testid="${domConfig}" style="font-size: 32px;font-family: ${fontFamily};">${testStr}</${tagName}>`
+            })
+            .reduce((pre, cur) => `${pre}${cur}`)
+        document.body.innerHTML = innerHTML
+        Object.entries(testConfig).forEach(([domId, result]) => {
+            const testDom = screen.getByTestId(domId)
+            const font = domGetFont(testDom)
+            expect(domGetTextWidth(testStr, font)).toBe(result)
         })
     })
 })

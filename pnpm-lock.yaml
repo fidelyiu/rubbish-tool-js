@@ -18,6 +18,7 @@ importers:
       eslint-config-prettier: ^8.6.0
       eslint-plugin-prettier: ^4.2.1
       jest: ^29.4.1
+      jest-canvas-mock: ^2.4.0
       jest-environment-jsdom: ^29.4.1
       prettier: ^2.8.3
       rimraf: ^4.1.2
@@ -37,6 +38,7 @@ importers:
       eslint-config-prettier: 8.6.0_eslint@8.33.0
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       jest: 29.4.1_zfha7dvnw4nti6zkbsmhmn6xo4
+      jest-canvas-mock: 2.4.0
       jest-environment-jsdom: 29.4.1
       prettier: 2.8.3
       rimraf: 4.1.2
@@ -1958,6 +1960,10 @@ packages:
       which: 2.0.2
     dev: true
 
+  /cssfontparser/1.2.1:
+    resolution: {integrity: sha1-9AIvyPlwDGgCnVQghK+69CWj8+M=}
+    dev: true
+
   /cssom/0.3.8:
     resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
     dev: true
@@ -2929,6 +2935,13 @@ packages:
       istanbul-lib-report: 3.0.0
     dev: true
 
+  /jest-canvas-mock/2.4.0:
+    resolution: {integrity: sha512-mmMpZzpmLzn5vepIaHk5HoH3Ka4WykbSoLuG/EKoJd0x0ID/t+INo1l8ByfcUJuDM+RIsL4QDg/gDnBbrj2/IQ==}
+    dependencies:
+      cssfontparser: 1.2.1
+      moo-color: 1.0.3
+    dev: true
+
   /jest-changed-files/29.4.0:
     resolution: {integrity: sha512-rnI1oPxgFghoz32Y8eZsGJMjW54UlqT17ycQeCEktcxxwqqKdlj9afl8LNeO0Pbu+h2JQHThQP0BzS67eTRx4w==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3586,6 +3599,12 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
+    dev: true
+
+  /moo-color/1.0.3:
+    resolution: {integrity: sha512-i/+ZKXMDf6aqYtBhuOcej71YSlbjT3wCO/4H1j8rPvxDJEifdwgg5MaFyu6iYAT8GBZJg2z0dkgK4YMzvURALQ==}
+    dependencies:
+      color-name: 1.1.4
     dev: true
 
   /ms/2.1.2:

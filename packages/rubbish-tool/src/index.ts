@@ -19,7 +19,13 @@ export {
     dateGetStr9,
     dateGetStr10,
 } from './Date'
-export { domOpenLink, domIsDescendant, domIsPathMath } from './Dom'
+export {
+    domOpenLink,
+    domIsDescendant,
+    domIsPathMath,
+    domGetFont,
+    domGetTextWidth,
+} from './Dom'
 export { lineIsIntersect, lineIsInner } from './Line'
 export { listGetItemByKey } from './List'
 export { numGetRound, numGetFloor, numGetCeil } from './Num'

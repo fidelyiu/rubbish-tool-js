@@ -44,3 +44,25 @@ export const domIsPathMath = (
     }
     return false
 }
+
+/**
+ * 获取dom的字体样式
+ * @param elt 要测量的元素
+ */
+export function domGetFont(elt?: Element): string {
+    return getComputedStyle(elt || document.body).font
+}
+
+/**
+ * 获取文本的宽度
+ * @link [stackoverflow](https://stackoverflow.com/questions/58704990/calculate-pixel-width-of-text-without-knowing-font-in-react-javascript)
+ * @param text 文本
+ * @param font 字体样式
+ */
+export function domGetTextWidth(text: string, font?: string): number {
+    const canvas = document.createElement('canvas')
+    const context = canvas.getContext('2d')
+    if (!context) return 0
+    context.font = font || domGetFont()
+    return context.measureText(text).width
+}
