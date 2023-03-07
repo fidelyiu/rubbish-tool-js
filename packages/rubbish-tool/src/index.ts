@@ -19,10 +19,13 @@ export {
     dateGetStr9,
     dateGetStr10,
 } from './Date'
+
+export type { DomGetTextWidthFunc } from './Dom'
 export {
     domOpenLink,
     domIsDescendant,
     domIsPathMath,
+    domGetCssStyle,
     domGetFont,
     domGetTextWidth,
 } from './Dom'
