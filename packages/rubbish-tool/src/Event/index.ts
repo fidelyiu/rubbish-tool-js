@@ -3,9 +3,8 @@
  */
 export function eventFalseProp(e: any): void {
     if (!e) return
-    const { stopPropagation } = e
-    if (typeof stopPropagation === 'function') {
-        stopPropagation()
+    if (typeof e.stopPropagation === 'function') {
+        e.stopPropagation()
     }
 }
 
@@ -14,9 +13,8 @@ export function eventFalseProp(e: any): void {
  */
 export function eventFalseDef(e: any): void {
     if (!e) return
-    const { preventDefault } = e
-    if (typeof preventDefault === 'function') {
-        preventDefault()
+    if (typeof e.preventDefault === 'function') {
+        e.preventDefault()
     }
 }
 
