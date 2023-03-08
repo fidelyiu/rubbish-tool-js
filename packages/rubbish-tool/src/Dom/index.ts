@@ -55,7 +55,7 @@ export function domGetCssStyle(el: Element, prop: string): string {
 /**
  * 获取元素字体样式
  */
-export function domGetFont(el = document.body): string {
+export function domGetFont(el: Element = document.body): string {
     const fontWeight = domGetCssStyle(el, 'font-weight') || 'normal'
     const fontSize = domGetCssStyle(el, 'font-size') || '16px'
     const fontFamily = domGetCssStyle(el, 'font-family') || 'Times New Roman'
