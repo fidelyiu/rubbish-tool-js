@@ -50,3 +50,28 @@ domIsPathMath(
     false
 )
 ```
+
+## 获取元素css属性定义
+
+```js
+import { domGetCssStyle } from 'rubbish-tool'
+
+const fontSize = domGetCssStyle(testDom, 'font-size')
+```
+
+
+## 获取元素字体样式
+
+```js
+import { domGetFont } from 'rubbish-tool'
+
+const fontStyle = domGetFont(testDom)
+```
+
+## 获取文本的宽度
+
+```js
+import { domGetTextWidth, domGetFont } from 'rubbish-tool'
+
+const fontWidth = domGetTextWidth("Holle Yiu", domGetFont(testDom))
+```
