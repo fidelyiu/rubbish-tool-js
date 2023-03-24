@@ -20,6 +20,7 @@ export default defineConfig({
     nav: [
       { text: "指引", link: "/guide/index.md" },
       { text: "工具", link: "/tool/Date/index.md" },
+      { text: "FY.IO", link: "https://fidelyiu.github.io/" },
     ],
     sidebar: {
       "/tool/": [
