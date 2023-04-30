@@ -1,6 +1,6 @@
 {
     "name": "rubbish-tool",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "The toolbox of methods at your fingertips in js",
     "scripts": {
         "format": "prettier --ignore-path .prettierignore --write .",
@@ -28,7 +28,9 @@
         ".": {
             "import": "./dist/esm/rubbish-tool.min.js",
             "require": "./dist/cjs/rubbish-tool.min.cjs"
-        }
+        },
+        "./types": "./dist/types/index.d.ts",
+        "./package.json": "./package.json"
     },
     "keywords": [],
     "author": "Field Yiu",
