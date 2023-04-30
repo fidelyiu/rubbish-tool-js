@@ -1,6 +1,6 @@
 {
     "name": "rubbish-tool",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "The toolbox of methods at your fingertips in js",
     "scripts": {
         "format": "prettier --ignore-path .prettierignore --write .",
@@ -19,6 +19,7 @@
     },
     "type": "module",
     "types": "./dist/types/index.d.ts",
+    "typings": "./dist/types/index.d.ts",
     "unpkg": "./dist/umd/rubbish-tool.min.js",
     "jsdelivr": "./dist/umd/rubbish-tool.min.js",
     "browser": "./dist/umd/rubbish-tool.min.js",
