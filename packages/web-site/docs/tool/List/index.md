@@ -21,3 +21,14 @@ const list = [
 
 listGetItemByKey(list, 'key', 2) // { key: 2, name: '2' }
 ```
+
+## 数组乱序
+
+返回一个乱序的新数组。
+
+```js
+import { listGetShuffle } from 'rubbish-tool'
+
+const list = [1, 2, 3, 4]
+const result = listGetShuffle(list)
+```

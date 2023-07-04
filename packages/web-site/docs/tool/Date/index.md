@@ -200,15 +200,19 @@ dateGetFloorDateByWeek(new Date('2023-01-01T00:00:00.000Z'))
 格式化对应形式字符串。
 
 ```js
-import { dateGetStr1 } from 'rubbish-tool'
+import { dataGetStrFn, dateGetStr1 } from 'rubbish-tool'
 
-dateGetStr1(new Date('2023-01-01T00:00:00.000Z'))
+dataGetStrFn(new Date(false), dateGetStr1, "??") // "??"
+dataGetStrFn(new Date(false), dateGetStr1) // "--"
+dataGetStrFn(new Date('2023-01-01T00:00:00.000Z'), dateGetStr1) // 2023年01月
+dateGetStr1(new Date('2023-01-01T00:00:00.000Z')) // 2023年01月
 ```
 
 格式化表格：
 
 | 方法           |           格式            |
 | -------------- | :-----------------------: |
+| `dataGetStrFn` |   根据传入的函数格式化    |
 | `dateGetStr1`  |       `YYYY年MM月`        |
 | `dateGetStr2`  |         `YYYY年`          |
 | `dateGetStr3`  |          `MM月`           |
