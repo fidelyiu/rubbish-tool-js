@@ -123,6 +123,7 @@ export function dataGetStrFn(
     formatFn: (date: Date) => string,
     inValidResult = '--'
 ): string {
+    if (!date) return inValidResult
     const formatDate = new Date(date)
     return dateIsValid(formatDate) ? formatFn(formatDate) : inValidResult
 }

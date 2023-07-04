@@ -1,6 +1,6 @@
 {
     "name": "rubbish-tool",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "description": "The toolbox of methods at your fingertips in js",
     "scripts": {
         "format": "prettier --ignore-path .prettierignore --write .",
