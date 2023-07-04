@@ -14,3 +14,21 @@ export function listGetItemByKey(list: any[], key: string, value: any) {
         return item
     }
 }
+
+/**
+ * 获取乱序的数组
+ */
+export function listGetShuffle(list: any[]) {
+    const result = [...list]
+    let currentIndex = result.length
+    let randomIndex
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex--
+        ;[result[currentIndex], result[randomIndex]] = [
+            result[randomIndex],
+            result[currentIndex],
+        ]
+    }
+    return result
+}

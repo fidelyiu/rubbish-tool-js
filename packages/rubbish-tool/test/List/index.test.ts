@@ -1,4 +1,5 @@
 import { listGetItemByKey } from '../../src'
+import { listGetShuffle } from '../../src/List'
 
 describe('数组测试', () => {
     describe('从数组中根据key检索item', () => {
@@ -33,6 +34,16 @@ describe('数组测试', () => {
                 5
             )
             expect(result).toBeFalsy()
+        })
+    })
+
+    describe('数组乱序测试', () => {
+        test('判断数组地址是否修改', () => {
+            const list = [1, 2, 3, 4, 5, 6]
+            const result = listGetShuffle(list)
+            expect(result === list).toBeFalsy()
+            expect([1, 2, 3, 4, 5, 6]).toEqual([1, 2, 3, 4, 5, 6])
+            expect(list).not.toEqual(result)
         })
     })
 })

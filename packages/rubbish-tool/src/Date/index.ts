@@ -113,6 +113,21 @@ export const dateGetFloorDateByWeek = (data: Date) => {
 }
 
 /**
+ * 根据函数获取时间格式化字符串
+ * @param date 时间
+ * @param formatFn 格式化函数
+ * @param inValidResult 无效时间格式化的值
+ */
+export function dataGetStrFn(
+    date: any,
+    formatFn: (date: Date) => string,
+    inValidResult = '--'
+): string {
+    const formatDate = new Date(date)
+    return dateIsValid(formatDate) ? formatFn(formatDate) : inValidResult
+}
+
+/**
  * 时间格式方法：
  * dateGetStr1 >> 'YYYY年MM月'
  * dateGetStr2 >> 'YYYY年'

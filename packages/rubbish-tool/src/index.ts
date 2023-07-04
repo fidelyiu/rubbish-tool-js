@@ -8,6 +8,7 @@ export {
     dateGetWeekNumber,
     dateGetFloorDateByDay,
     dateGetFloorDateByWeek,
+    dataGetStrFn,
     dateGetStr1,
     dateGetStr2,
     dateGetStr3,
@@ -31,7 +32,7 @@ export {
 } from './Dom'
 export { eventFalseProp, eventFalseDef, eventFalse } from './Event'
 export { lineIsIntersect, lineIsInner } from './Line'
-export { listGetItemByKey } from './List'
+export { listGetItemByKey, listGetShuffle } from './List'
 export { numGetRound, numGetFloor, numGetCeil } from './Num'
 export { objIsStrEqual } from './Obj'
 export { randomGetId, randomGetInt } from './Random'
